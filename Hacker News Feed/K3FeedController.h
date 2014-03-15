@@ -1,5 +1,5 @@
 //
-//  K3ViewController.h
+//  K3FeedController.h
 //  Hacker News Feed
 //
 //  Created by Kiran on 15/03/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface K3ViewController : UITableViewController
+@interface K3FeedController : UITableViewController
 
 @end

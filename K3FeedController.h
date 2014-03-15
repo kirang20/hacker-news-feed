@@ -1,13 +1,13 @@
 //
-//  K3ViewController.h
+//  K3FeedController.h
 //  Hacker News Feed
 //
 //  Created by Kiran on 15/03/14.
 //  Copyright (c) 2014 Kiran. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface K3ViewController : UITableViewController
+@interface K3FeedController : NSObject
 
 @end
