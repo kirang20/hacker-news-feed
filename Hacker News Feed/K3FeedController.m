@@ -21,15 +21,6 @@
 
 @implementation K3FeedController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -59,8 +50,12 @@
     NSDictionary* selectedFeed = self.feed[@"items"][indexPath.row];
     NSString* feedTitle = [NSString stringWithFormat:@"%@", selectedFeed[@"title"]];
     NSString* commentCount = [NSString stringWithFormat:@"%@", selectedFeed[@"commentCount"]];
+    NSString* postedBy = [NSString stringWithFormat:@"%@", selectedFeed[@"postedBy"]];
+    
     [cell.feedTitle setText:feedTitle];
     [cell.feedNumberOfComments setText:commentCount];
+    [cell.feedPostedBy setText:postedBy];
+    
     return cell;
 }
 

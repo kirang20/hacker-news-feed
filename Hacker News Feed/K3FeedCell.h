@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *feedTitle;
 @property (weak, nonatomic) IBOutlet UILabel *feedNumberOfComments;
+@property (weak, nonatomic) IBOutlet UILabel *feedPostedBy;
 
 @end
