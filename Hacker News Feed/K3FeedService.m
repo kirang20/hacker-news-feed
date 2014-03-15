@@ -15,15 +15,16 @@
 @end
 
 @implementation K3FeedService
-- (void) fetch{
+
+- (void) fetch:(id<K3FeedProtocol>) delegate{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     [manager
      GET:@"http://api.ihackernews.com/page"
      parameters:nil
      success:^(AFHTTPRequestOperation *operation, id responseObject) {
-         NSLog(@"%@", responseObject);
-         self.feed = responseObject;
+         //         NSLog(@"%@", responseObject);
+         [delegate feedDidDownload:(NSDictionary* ) responseObject];
      }
      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          NSLog(@"Error: %@", error);

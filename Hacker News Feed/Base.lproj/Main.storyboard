@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Feed Controller - Root View Controller-->
+        <!--Feed Controller - What's new in Hacker News-->
         <scene sceneID="pJ5-tQ-aNw">
             <objects>
                 <tableViewController id="Grg-rD-Nsr" customClass="K3FeedController" sceneMemberID="viewController">
@@ -12,14 +12,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="ML7-Vl-qjZ">
+                            <rect key="frame" x="0.0" y="130" width="320" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feed" id="ztT-5c-9CK">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feed" id="ztT-5c-9CK">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ztT-5c-9CK" id="2UF-cK-1nb">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="7us-b7-xNb" kind="push" id="riG-ax-FBG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -27,11 +34,43 @@
                             <outlet property="delegate" destination="Grg-rD-Nsr" id="YNU-90-LpY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="4TY-Qa-fcP"/>
+                    <navigationItem key="navigationItem" title="What's new in Hacker News" id="4TY-Qa-fcP"/>
+                    <connections>
+                        <outlet property="progressIndicator" destination="ML7-Vl-qjZ" id="tPP-SK-4vW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cow-NO-pNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="659" y="143"/>
+        </scene>
+        <!--Feed Detail Controller-->
+        <scene sceneID="O0m-f1-64e">
+            <objects>
+                <viewController id="7us-b7-xNb" customClass="K3FeedDetailController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tXD-Ye-Qie"/>
+                        <viewControllerLayoutGuide type="bottom" id="bJb-pK-cQP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0E7-WS-ZcL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybo-81-cMk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QQm-0h-CHv"/>
+                    <connections>
+                        <outlet property="feedWebView" destination="Ybo-81-cMk" id="7MJ-WV-Y7L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXt-bC-5TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bgV-tN-J3z">

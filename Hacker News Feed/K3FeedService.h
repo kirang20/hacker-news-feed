@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "K3FeedProtocol.h"
 #import "AFHTTPRequestOperationManager.h"
 
 @interface K3FeedService : NSObject
-- (void) fetch;
+- (void) fetch:(id<K3FeedProtocol>) delegate;
 @end

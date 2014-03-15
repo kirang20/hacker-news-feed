@@ -1,5 +1,5 @@
 //
-//  K3FeedController.h
+//  K3FeedDetailController.h
 //  Hacker News Feed
 //
 //  Created by Kiran on 15/03/14.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "K3FeedProtocol.h"
 
-@interface K3FeedController : UITableViewController<K3FeedProtocol>
+@interface K3FeedDetailController : UIViewController<UIWebViewDelegate>
+
+@property NSDictionary* feedItem;
 
 @end
