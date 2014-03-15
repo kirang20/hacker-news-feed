@@ -23,6 +23,7 @@
 		84C2DD8418D43CDA0031DB55 /* K3FeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2DD8318D43CDA0031DB55 /* K3FeedController.m */; };
 		84C2DD8718D43D3A0031DB55 /* K3FeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2DD8618D43D3A0031DB55 /* K3FeedService.m */; };
 		84C2DD8D18D44ED80031DB55 /* K3FeedDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2DD8C18D44ED80031DB55 /* K3FeedDetailController.m */; };
+		84C2DD9418D45DF60031DB55 /* K3FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2DD9318D45DF60031DB55 /* K3FeedCell.m */; };
 		A5EA79C4EAA74691A7AB768C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 998A0BB838C5439590FE997D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		84C2DD8A18D449740031DB55 /* K3FeedProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = K3FeedProtocol.h; sourceTree = "<group>"; };
 		84C2DD8B18D44ED80031DB55 /* K3FeedDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3FeedDetailController.h; sourceTree = "<group>"; };
 		84C2DD8C18D44ED80031DB55 /* K3FeedDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3FeedDetailController.m; sourceTree = "<group>"; };
+		84C2DD9218D45DF60031DB55 /* K3FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = K3FeedCell.h; sourceTree = "<group>"; };
+		84C2DD9318D45DF60031DB55 /* K3FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = K3FeedCell.m; sourceTree = "<group>"; };
 		998A0BB838C5439590FE997D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +136,8 @@
 				84C2DD4B18D43A880031DB55 /* Supporting Files */,
 				84C2DD8218D43CDA0031DB55 /* K3FeedController.h */,
 				84C2DD8318D43CDA0031DB55 /* K3FeedController.m */,
+				84C2DD9218D45DF60031DB55 /* K3FeedCell.h */,
+				84C2DD9318D45DF60031DB55 /* K3FeedCell.m */,
 				84C2DD8518D43D3A0031DB55 /* K3FeedService.h */,
 				84C2DD8618D43D3A0031DB55 /* K3FeedService.m */,
 				84C2DD8A18D449740031DB55 /* K3FeedProtocol.h */,
@@ -314,6 +319,7 @@
 				84C2DD5518D43A880031DB55 /* K3AppDelegate.m in Sources */,
 				84C2DD8718D43D3A0031DB55 /* K3FeedService.m in Sources */,
 				84C2DD8418D43CDA0031DB55 /* K3FeedController.m in Sources */,
+				84C2DD9418D45DF60031DB55 /* K3FeedCell.m in Sources */,
 				84C2DD5118D43A880031DB55 /* main.m in Sources */,
 				84C2DD8D18D44ED80031DB55 /* K3FeedDetailController.m in Sources */,
 			);

@@ -9,6 +9,7 @@
 #import "K3FeedController.h"
 #import "K3FeedService.h"
 #import "K3FeedDetailController.h"
+#import "K3FeedCell.h"
 
 @interface K3FeedController ()
 
@@ -54,15 +55,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"feed"];
-    NSString* feedTitle = [NSString stringWithFormat:@"%@", self.feed[@"items"][indexPath.row][@"title"]];
-    [cell.textLabel setText:feedTitle];
+    K3FeedCell * cell = [tableView dequeueReusableCellWithIdentifier:@"feed"];
+    NSDictionary* selectedFeed = self.feed[@"items"][indexPath.row];
+    NSString* feedTitle = [NSString stringWithFormat:@"%@", selectedFeed[@"title"]];
+    NSString* commentCount = [NSString stringWithFormat:@"%@", selectedFeed[@"commentCount"]];
+    [cell.feedTitle setText:feedTitle];
+    [cell.feedNumberOfComments setText:commentCount];
     return cell;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UITableViewCell *cell = (UITableViewCell*) sender;
+    K3FeedCell *cell = (K3FeedCell*) sender;
     int index = [[self.tableView indexPathForCell:cell] row];
     K3FeedDetailController * controller = (K3FeedDetailController*) [segue destinationViewController];
     [controller setFeedItem:self.feed[@"items"][index]];
